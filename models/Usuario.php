@@ -8,6 +8,7 @@ class Usuario extends Conectar{
         $sql=$conectar->prepare($sql); 
         $sql->bindValue(1,$usu_email);  
         $sql->bindValue(2,$usu_pass);  
+        $sql->execute();
      }
 }
 
