@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Usuario extends Conectar{
     public function get_login($usu_email, $usu_pass){
@@ -9,6 +9,7 @@ class Usuario extends Conectar{
         $sql->bindValue(1,$usu_email);  
         $sql->bindValue(2,$usu_pass);  
         $sql->execute();
+        return $resultado = $sql->fetchAll();
      }
 }
 

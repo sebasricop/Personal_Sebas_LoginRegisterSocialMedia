@@ -1,5 +1,5 @@
-<?
-
+<?php
+session_start();
 class Conectar{
      protected $dbh;
 
@@ -14,7 +14,7 @@ class Conectar{
 
      }
      public function set_names(){
-         return $this->dbh->query("SET NAMES 'utf8");
+        return $this->dbh->query("SET NAMES 'utf8'");
      }
 
      public function ruta(){
