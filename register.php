@@ -31,21 +31,20 @@
   <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
     <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
-      <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Registrate <span
-          class="tx-normal">]</span></div>
+      <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Registrate <span class="tx-normal">]</span></div>
       <div class="tx-center mg-b-60">Ingrese usuario y contraseña</div>
 
       <div class="form-group">
         <input type="text" id="usu_nom" name="usu_nom" class="form-control" placeholder="Ingrese Nombre y Apellido">
       </div>
       <div class="form-group">
-        <input type="email" id="usu_correo" name="usu_correo" class="form-control" placeholder="Ingrese Correo Electronico">
+        <input type="email" id="usu_email" name="usu_email" class="form-control" placeholder="Ingrese Correo Electronico">
       </div>
       <div class="form-group">
-        <input type="password" id="usu_pass" name="usu_pass"class="form-control" placeholder="Ingrese Contraseña">
+        <input type="password" id="usu_pass" name="usu_pass" class="form-control" placeholder="Ingrese Contraseña">
       </div>
       <div class="form-group">
-        <input type="password" id="usu_pass1" name="usu_pass1"class="form-control" placeholder="Confirmar Contraseña">
+        <input type="password" id="usu_pass1" name="usu_pass1" class="form-control" placeholder="Confirmar Contraseña">
       </div>
       <button type="submit" id="btnregistrar" class="btn btn-info btn-block">Registrarse</button>
 
