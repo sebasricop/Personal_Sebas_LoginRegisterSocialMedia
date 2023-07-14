@@ -8,9 +8,9 @@ switch ($_GET["op"]) {
     case "acceso":
         $datos = $usuario->get_login($_POST["usu_email"], $_POST["usu_pass"]);
         if (is_array($datos) == true and count($datos) > 0) {
-            echo json_encode($datos);
+           echo "1";
         } else {
-            echo json_encode("Error");
+            echo "0";
         }
         break;
 }

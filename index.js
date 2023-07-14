@@ -13,13 +13,19 @@ $(document).on("click", "#btnlogin", function () {
   if (usu_email == "" || usu_pass == "") {
     console.log("Vacios");
     $("#lblmensaje").show();
+    $("#lblerror").hide();
   } else {
     $.post(
       "controller/usuario.php?op=acceso",
       { usu_email: usu_email, usu_pass: usu_pass },
       function (data) {
-        data = JSON.parse(data);
-        console.log(data);
+        if (data == 0) {
+          $("#lblerror").show();
+          $("#lblmensaje").hide();
+
+        }else{
+          window.open('https://localhost/Personal_Sebas_LoginRegisterSocialMedia/view/home/','_self');
+        }
       }
     );
   }
