@@ -1,4 +1,5 @@
 <?php
+//hola
 
 class Usuario extends Conectar{
     public function get_login($usu_email, $usu_pass){
