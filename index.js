@@ -22,9 +22,11 @@ $(document).on("click", "#btnlogin", function () {
         if (data == 0) {
           $("#lblerror").show();
           $("#lblmensaje").hide();
-
-        }else{
-          window.open('https://localhost/Personal_Sebas_LoginRegisterSocialMedia/view/home/','_self');
+        } else {
+          window.open(
+            "https://localhost/Personal_Sebas_LoginRegisterSocialMedia/view/home/",
+            "_self"
+          );
         }
       }
     );

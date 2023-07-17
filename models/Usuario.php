@@ -16,7 +16,7 @@ class Usuario extends Conectar{
     {
         $conectar = parent::conexion();
         parent::set_names();
-        $sql = "INSERT INTO tm_usuario (usu_id, usu_nom, usu_email, usu_pass, estado) VALUES (NULL, '?', '?', '?', '1')";
+        $sql = "INSERT INTO `tm_usuario` (usu_id, usu_nom, usu_email, usu_pass, estado) VALUES (NULL, ?, ?, ?, '1')";
         $sql = $conectar->prepare($sql);
         $sql->bindValue(1, $usu_nom);
         $sql->bindValue(2, $usu_email);
@@ -28,7 +28,7 @@ class Usuario extends Conectar{
     {
         $conectar = parent::conexion();
         parent::set_names();
-        $sql = "select * from tm_usuario where usu_email=?";
+        $sql = "select * from `tm_usuario` where usu_email=? AND estado = '1'";
         $sql = $conectar->prepare($sql);
         $sql->bindValue(1, $usu_email);
         $sql->execute();
