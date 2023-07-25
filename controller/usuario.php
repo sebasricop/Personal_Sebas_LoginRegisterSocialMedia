@@ -14,6 +14,15 @@ switch ($_GET["op"]) {
         }
         break;
 
+    case "accesoSocial":
+        $datos = $usuario->get_login_social($_POST["usu_email"]);
+        if (is_array($datos) == true and count($datos) > 0) {
+            echo "1";
+        } else {
+            echo "0";
+        }
+        break;
+
     case "registro":
         $datos = $usuario->get_correo($_POST["usu_email"]);
 

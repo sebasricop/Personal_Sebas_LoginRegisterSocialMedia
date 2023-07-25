@@ -1,3 +1,100 @@
+document.getElementById("btnloging").addEventListener("click", function () {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  auth
+    .signInWithPopup(provider)
+    .then(function (result) {
+      var user = result.user;
+      console.log(user);
+      console.log(result.user.providerData[0].displayName);
+      console.log(result.user.providerData[0].email);
+      console.log(result.user.providerData[0].photoURL);
+
+      $.post(
+        "controller/usuario.php?op=accesoSocial",
+        { usu_email: result.user.providerData[0].email },
+        function (data) {
+          if (data == 0) {
+            $("#lblerror").hide();
+            $("#lblmensaje").hide();
+            $("#lblregistro").show();
+          } else {
+            window.open(
+              "https://localhost/Personal_Sebas_LoginRegisterSocialMedia/view/home/",
+              "_self"
+            );
+          }
+        }
+      );
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+/*document.getElementById("btnlogingf").addEventListener("click", function () {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  auth
+    .signInWithPopup(provider)
+    .then(function (result) {
+      var user = result.user;
+      console.log(user);
+      console.log(result.user.providerData[0].displayName);
+      console.log(result.user.providerData[0].email);
+      console.log(result.user.providerData[0].photoURL);
+
+      $.post(
+        "controller/usuario.php?op=accesoSocial",
+        { usu_email: result.user.providerData[0].email },
+        function (data) {
+          if (data == 0) {
+            $("#lblerror").hide();
+            $("#lblmensaje").hide();
+            $("#lblregistro").show();
+          } else {
+            window.open(
+              "https://localhost/Personal_Sebas_LoginRegisterSocialMedia/view/home/",
+              "_self"
+            );
+          }
+        }
+      );
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+document.getElementById("btnlogingh").addEventListener("click", function () {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  auth
+    .signInWithPopup(provider)
+    .then(function (result) {
+      var user = result.user;
+      console.log(user);
+      console.log(result.user.providerData[0].displayName);
+      console.log(result.user.providerData[0].email);
+      console.log(result.user.providerData[0].photoURL);
+
+      $.post(
+        "controller/usuario.php?op=accesoSocial",
+        { usu_email: result.user.providerData[0].email },
+        function (data) {
+          if (data == 0) {
+            $("#lblerror").hide();
+            $("#lblmensaje").hide();
+            $("#lblregistro").show();
+          } else {
+            window.open(
+              "https://localhost/Personal_Sebas_LoginRegisterSocialMedia/view/home/",
+              "_self"
+            );
+          }
+        }
+      );
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});*/
+
 function init() {}
 
 $(document).ready(function () {

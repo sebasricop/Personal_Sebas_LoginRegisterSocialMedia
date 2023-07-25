@@ -83,28 +83,28 @@
   <script src="public/lib/jquery/jquery.js"></script>
   <script src="public/lib/popperjs/popper.js"></script>
   <script src="public/lib/bootstrap/bootstrap.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
 
   <script>
-    var firebaseConfig = {
+    const config = {
       apiKey: "AIzaSyAEHHtR5OsNDjEpcdty7lQwikeGxTTjawg",
       authDomain: "loginsocialmedia-7b339.firebaseapp.com",
       projectId: "loginsocialmedia-7b339",
       storageBucket: "loginsocialmedia-7b339.appspot.com",
       messagingSenderId: "455780326172",
       appId: "1:455780326172:web:06bd050ca8dbb72dfeb8d9",
-      measurementId: "G-4VGGEB97SZ"
+      measurementId: "G-4VGGEB97SZ",
     };
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    firebase.initializeApp(config);
+    var auth = firebase.auth();
   </script>
-
-
   <script src="index.js"></script>
+
+
 </body>
 
 </html>
