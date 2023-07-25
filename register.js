@@ -41,8 +41,10 @@ document.getElementById("btnloging").addEventListener("click", function () {
       console.log(error);
     });
 });
-/*document.getElementById("btnloginf").addEventListener("click", function () {
-  var provider = new firebase.auth.GoogleAuthProvider();
+
+
+document.getElementById("btnloginf").addEventListener("click", function () {
+  var provider = new firebase.auth.FacebookAuthProvider();
   auth
     .signInWithPopup(provider)
     .then(function (result) {
@@ -84,8 +86,10 @@ document.getElementById("btnloging").addEventListener("click", function () {
       console.log(error);
     });
 });
+
+
 document.getElementById("btnloginh").addEventListener("click", function () {
-  var provider = new firebase.auth.GoogleAuthProvider();
+  var provider = new firebase.auth.GithubAuthProvider();
   auth
     .signInWithPopup(provider)
     .then(function (result) {
@@ -126,7 +130,7 @@ document.getElementById("btnloginh").addEventListener("click", function () {
     .catch(function (error) {
       console.log(error);
     });
-});*/
+});
 
 function init() {}
 
